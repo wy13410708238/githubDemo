@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条下拉列表</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        ul{list-style: none;}
+        .fl{float: left;}
+        .fr{float: right;}
+        a:hover{color: #fff;}
+        .clearfix::after{content: '';display: block;height: 0; clear: both;}
+        #header{ width: 100%;min-width: 1200px;height: 100px;background-color: aquamarine;}
+        .container{width: 1200px;margin: 0 auto;}
+        #header .nav>li{width: 240px;height:100px;box-sizing: border-box;overflow: hidden; transition: all 1s; border-right:1px solid #eaeaea ;color:red; font-size: 20px;text-align: center;line-height: 100px;}
+        #header .nav>li:last-child{border-right: 0px;}
+        #header .nav .select{background-color: blueviolet;width: 250px;}
+        #header .nav .select li{font-size: 16px;line-height: 40px;text-align: center;display: none; color: black;}
+        #header .nav .select li:hover{background-color: chartreuse;color: cornsilk;}
+        #header .nav>li:hover .select li{display: block;}
+        #header .nav>li:hover {background-color: saddlebrown;height: 260px;}        
+        /* 
+        这里的动画效果需要注意的是 ：下拉的时候要实现动画效果不能使用display 为none display不支持动画 
+        
+            这里用的overflow 为hidden  把元素溢出的部分隐藏，执行动画时改变元素的高度就行了
+
+            dispaly的话 执行动画的时候显示这个元素---------因为display隐藏的元素不占位显示的时候其实没有动画执行的空间
+        */
+    </style>
+    
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+            <ul class="nav clearfix">
+                <li class="fl">首页
+                    <div class="select">
+                        <ul>
+                            <li>12</li>
+                            <li>2</li>
+                            <li>33</li>
+                            <li>45</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fl">开始
+                    <div class="select">
+                        <ul>
+                            <li>12</li>
+                            <li>2</li>
+                            <li>33</li>
+                            <li>45</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fl">content
+                    <div class="select">
+                        <ul>
+                            <li>12</li>
+                            <li>2</li>
+                            <li>33</li>
+                            <li>45</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fl">中间
+                    <div class="select">
+                        <ul>
+                            <li>12</li>
+                            <li>2</li>
+                            <li>33</li>
+                            <li>45</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fl">尾部
+                    <div class="select">
+                        <ul>
+                            <li>12</li>
+                            <li>2</li>
+                            <li>33</li>
+                            <li>45</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+</body>
+</html>

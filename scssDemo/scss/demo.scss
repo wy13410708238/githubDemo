@@ -1,0 +1,37 @@
+/* 定义变量与值 */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+$text:center;
+$width:500px;
+$heeight:300px;
+
+
+/* 使用变量 */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+}
+
+div{
+    width: $width;
+    height: $heeight;
+}
+
+nav{
+    ul{
+        margin:0 auto;
+    }
+    li{
+        display: inline-block;
+    }
+}
+
+a{
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+      }
+}

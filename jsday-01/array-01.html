@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/demo.js"></script>
+    <script src="./../jquery-01/lib/jquery.js"></script>
+    <style>
+        .demo{
+            font-size: 14px;
+            height :200px;
+            width: 1200px;
+            margin:0 auto;
+            padding: 0;
+            line-height: 30px;
+            color: aqua;
+            text-indent: 20px;
+        }
+        .main{
+            min-width: 1200px;
+            width: 100%;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .main-text{
+            font-size: 30px;
+            line-height: 30px;
+            padding: 15px;
+        }
+
+        p span{
+            margin-right: 30px;
+            line-height: 20px;
+            width:100px;
+            display: inline-block;
+        }
+
+        .main .main-banner{
+            margin: 0 auto;
+            width:800;
+            border: 1px solid #F0E6DC;
+            background: url('./img/111.gif')no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h2 class="main-text">以下谁不是三国猛将:
+            <span>(</span>
+            <em id="result"></em>
+            <span>)</span>
+            <h2>
+            <p class="select_arr">
+                <label onclick="redio_del()"><span>A.赵云</span></label>
+                <label><span>B.庞统</span></label>
+                <label><span>C.荀彧</span></label>
+                <label><span>D.周伯通</span></label>
+            </p>
+        </div>
+        <form action="#">
+            城市
+            <select multiple size="2" disabled>
+                <option value="武汉" >武汉</option>
+                <option value="深圳">深圳</option>
+                <option value="广州">广州</option>
+            </select>
+            <select size="2">
+                <option value="宝安">宝安</option>
+                <option value="南山">南山</option>
+                <option value="龙华">龙华</option>
+                <option value="龙岗">龙岗</option>
+            </select>
+            区/县
+        </form>
+
+        <div class="main-banner">
+
+        </div>
+    </div>
+</body>
+</html>

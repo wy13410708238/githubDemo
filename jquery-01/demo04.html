@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+    <style>
+        .content{
+            width: 200px;
+            height: 200px;
+            background-color: darkgoldenrod;
+            position: fixed;
+            left: -200px;
+            top: 30%;
+        }
+
+        .content div{
+            width: 30px;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: darkred;
+            position: absolute;
+            right: -30px;
+            top:30%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div>分享到</div>
+    </div>
+    <script>
+        $(function(){
+            $(".content").hover(function(){
+                $(this).stop().animate({left:0},500);
+            },function(){
+                $(this).stop().animate({left:-200},500);
+            });
+        });
+    </script>
+</body>
+</html>

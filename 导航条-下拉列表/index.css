@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    min-width: 1200;
+    background-color: brown;
+}
+
+#header .nav{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#header .nav {
+    clear: both;
+    display: block;
+}
+
+#header .nav li{
+    width: 100px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 100px;
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+#header .nav li .select_list{
+    background-color: cadetblue;
+    width: 100px;
+    position: absolute;
+    display: none;
+}
+
+#header .nav li:hover .select_list{
+    display: block;
+}
+
+#header .nav li .select_list li{
+    line-height: 30px;
+}
+

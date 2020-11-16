@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性渐变</title>
+</head>
+<body>
+    <style>
+         div{
+            width:300px;
+            height: 100px;
+            background-image: linear-gradient(to bottom,rgba(150,0,0,0.4),rgba(200,0,0,0.7));
+        }
+        .demo2{
+            width:200px;    
+            height: 100px;
+            -opacity: 0.3;
+            background-image: repeating-linear-gradient(45deg,blue,orange 10%,green 7%,red 4% ,indigo 7%, violet 3%);
+        }
+        
+        .demo3{
+            width: 400px;
+            height: 100px;
+            background-image: radial-gradient(circle ,red 15%, yellow 45%, green 40%);
+        }
+
+        .demo4{
+             width:400px;
+             height: 400px;
+             background-image: radial-gradient(closest-corner at 70% 70%,red ,blue,yellow,green,black);
+        }
+    </style>
+    <div></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <script>
+        document.getElementsByClassName("demo4")[0].onclick = 
+        function(){ 
+            if (navigator.geolocation){ 
+                navigator.geolocation.getCurrentPosition(showPosition,showError); 
+            }else{ 
+                alert("浏览器不支持地理定位。"); 
+            }   
+        }
+
+        function showPosition(position){
+            debugger;
+            console.log(position); 
+            var lat = position.coords.latitude; //纬度 
+            var lag = position.coords.longitude; //经度 
+            console.log('纬度:'+lat+',经度:'+lag); 
+        } 
+
+
+        function showError(error){ 
+            switch(error.code) { 
+                case error.PERMISSION_DENIED: 
+                alert("定位失败,用户拒绝请求地理定位"); 
+                break; 
+                case error.POSITION_UNAVAILABLE: 
+                alert("定位失败,位置信息是不可用"); 
+                break; 
+                case error.TIMEOUT: 
+                alert("定位失败,请求获取用户位置超时"); 
+                break; 
+                case error.UNKNOWN_ERROR: 
+                alert("定位失败,定位系统失效"); 
+                break; 
+            } 
+        } 
+    </script>
+</body>
+</html>

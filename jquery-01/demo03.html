@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+</head>
+<body>
+    <style>
+        *{padding:0;margin: 0;}
+        div{
+            -border :1px solid yellowgreen;
+            color: #fff;
+            width: 150px;
+            margin: 0 auto;
+        }
+        dl{
+            width: 150px;
+        }
+        dt{
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 10px;
+             width: 150px;
+             background-color:darkgoldenrod;
+             position: relative;
+        }
+        span{
+            display: inline-block;
+            background-color: red;
+            font-size: 16px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+        dd{
+            width: 150px;
+            background-color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
+    <div>
+        <dl>
+            <dt>苹果 <span>-</span></dt>
+            <dd>苹果1</dd>
+            <dd>苹果2</dd>
+            <dd>苹果3</dd>
+
+            <dt>香蕉 <span>-</span></dt>
+            <dd>香蕉1</dd>
+            <dd>香蕉2</dd>
+            <dd>香蕉3</dd>
+
+            <dt>栗子 <span>-</span></dt>
+            <dd>栗子1</dd>
+            <dd>栗子2</dd>
+            <dd>栗子3</dd>
+
+            <dt>折耳根 <span>-</span></dt>
+            <dd>折耳根1</dd>
+            <dd>折耳根2</dd>
+            <dd>折耳根3</dd>
+        </dl>
+    </div>
+    
+    <script>
+        $("dt").click(
+            function (){
+                /* 显示关闭当前的二级菜单 */
+                $(this).nextUntil("dt").slideToggle(500);
+                /* 关闭其他二级菜单 */
+                $(this).siblings("dt").nextUntil("dt").slideUp(500);
+
+                /* 当前按钮的展开关闭 */
+               var btn= $("span",this).html();
+               btn =="+" ? $("span",this).html("-"):$("span",this).html("+");
+                /* 其他按钮换成+ */
+                $(this).siblings("dt").find("span").html("+");
+            }
+        );
+    </script>
+</body>
+</html>
